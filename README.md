@@ -1,3 +1,5 @@
+Extend the "scope" for subset resources.
+
 # PHP OAuth 2.0 Server by [@alexbilbie](https://twitter.com/alexbilbie)
 
 [![Latest Version](http://img.shields.io/packagist/v/league/oauth2-server.svg?style=flat-square)](https://github.com/thephpleague/oauth2-server/releases)
