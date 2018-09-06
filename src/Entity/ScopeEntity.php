@@ -35,6 +35,13 @@ class ScopeEntity implements \JsonSerializable
     protected $description;
 
     /**
+     * Scope resources
+     *
+     * @var string
+     */
+    protected $resources;
+
+    /**
      * Authorization or resource server
      *
      * @var \League\OAuth2\Server\AbstractServer
@@ -76,6 +83,16 @@ class ScopeEntity implements \JsonSerializable
     }
 
     /**
+     * Return the scope's resources info
+     *
+     * @return string
+     */
+    public function getResources()
+    {
+        return $this->resources;
+    }
+
+    /**
      * Returns a JSON object when entity is passed into json_encode
      *
      * @return array
@@ -83,8 +100,9 @@ class ScopeEntity implements \JsonSerializable
     public function jsonSerialize()
     {
         return [
-            'id'    =>  $this->getId(),
-            'description'   =>  $this->getDescription()
+            'id'          => $this->getId(),
+            'description' => $this->getDescription(),
+            'resources'   => $this->getResources()
         ];
     }
 }
